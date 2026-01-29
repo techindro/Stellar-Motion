@@ -1,1 +1,30 @@
+% Dummy starData.mat create karne ke liye (Hydrogen-alpha absorption simulate)
+clear; clc;
 
+% Wavelength vector (real jaise ~630 to 660 nm, 0.14 nm step)
+lambda = 630.02 : 0.14 : 660.00;  % approx 216 points
+nObs = length(lambda);
+
+% Rest wavelength
+lambda_rest = 656.28;
+
+% 7 stars ke liye different shifts (redshift/blueshift)
+shifts = [0.00, 0.05, -0.10, 0.15, 0.08, 0.20, -0.05];  % in nm (small Doppler shifts)
+
+spectra = zeros(nObs, 7);
+for i = 1:7
+    % Simple Gaussian absorption dip at shifted wavelength
+    center = lambda_rest + shifts(i);
+    spectra(:,i) = 1 - 0.8 * exp( - (lambda - center).^2 / (2 * 0.08^2) );
+    
+    % Thoda noise add kar sakta hai realism ke liye
+    spectra(:,i) = spectra(:,i) + 0.02 * randn(nObs,1);
+end
+
+% Star names (real course mein similar hote hain)
+starnames = {'HD94028', 'StarA', 'StarB', 'StarC', 'StarD', 'StarE', 'StarF'};
+
+% Save as starData.mat
+save('starData.mat', 'lambda', 'spectra', 'starnames');
+
+disp('Dummy starData.mat created! Now load it in your script.');
