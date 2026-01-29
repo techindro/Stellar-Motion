@@ -1,1 +1,29 @@
-# Stellar-Motion
+# Stellar Motion Analysis using MATLAB
+
+This project analyzes the **radial velocity** of stars using Doppler shift (redshift/blueshift) from their spectra. It focuses on the Hydrogen-alpha (Hα) absorption line at rest wavelength 656.28 nm to determine how fast stars are moving toward or away from Earth.
+
+## Project Overview
+- Plot the spectrum of individual stars (e.g., HD94028)
+- Find the observed wavelength of the Hα line (minimum intensity point)
+- Calculate redshift z = (λ_observed / λ_rest) - 1
+- Compute radial velocity v = z × c (where c = 299792 km/s)
+- Loop through multiple stars, plot spectra (red dashed for receding, blue solid for approaching)
+- Display stars moving away from Earth
+
+## Files Included
+- `stellar_motion_analysis.m` → Main script with calculations and plots
+- `starData.mat`           → Data file (load starData; contains lambda, spectra, starnames)
+- `README.md`              → This file
+
+## How to Run
+1. Open MATLAB
+2. Set the current folder to this repository
+3. Run the script: `stellar_motion_analysis`
+
+## Example Output
+- For HD94028: Radial velocity ≈ +XXX km/s (positive = receding/redshift)
+- Plots show spectra with marked Hα dip and legend for all stars
+
+Data Source: MATLAB Onramp course (Stellar Motion project section)
+
+Created by Shubham | Uttar Pradesh, India | January 2026
