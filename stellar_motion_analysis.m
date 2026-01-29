@@ -90,6 +90,14 @@ legend(starnames, 'Location', 'bestoutside');
 grid on;
 hold off;
 
+## Example Plots
+
+![Single Star Spectrum](single_star_HD94028_spectrum.png)
+*HD94028 ka spectrum with marked Hα line (~ +82 km/s redshift)*
+
+![All Stars Spectra](all_stars_spectra.png)
+*Sab stars ke overlaid spectra (red dashed = receding, blue thick = approaching)*
+
 % Summary (Task 6-7 often)
 movaway = starnames(speed > 0);   % Stars moving away (receding)
 fprintf('\nStars moving away from Earth: %s\n', strjoin(movaway, ', '));
