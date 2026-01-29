@@ -1,40 +1,40 @@
-# 🔭 Stellar Motion Analysis: Radial Velocity & Doppler Shift
-**Developer:** Shubham | 📍 Uttar Pradesh, India | 📅 January 2026
+# 🔭 Stellar Motion Analysis using MATLAB
 
-## 🚀 Project Overview
-This project automates the calculation of **radial velocity** ($v_r$) for a set of stars using the Doppler Effect. By analyzing the shift in the **Hydrogen-alpha ($H\alpha$)** absorption line, we determine whether a star is receding (redshift) or approaching (blueshift).
+This project analyzes the **radial velocity** of stars using Doppler shift (redshift/blueshift) from their spectra. It focuses on the Hydrogen-alpha (Hα) absorption line at rest wavelength 656.28 nm to determine how fast stars are moving toward or away from Earth.
 
-### 🧮 Physics Architecture
-The system uses the following shift logic:
-1. **Redshift ($z$):** $$z = \frac{\lambda_{observed} - \lambda_{rest}}{\lambda_{rest}}$$
-2. **Radial Velocity ($v$):**
-   $$v = z \times c$$
-   *(where $c \approx 299,792$ km/s)*
+## Project Overview
+- Plot the spectrum of individual stars (e.g., HD94028)
+- Find the observed wavelength of the Hα line (minimum intensity point)
+- Calculate redshift z = (λ_observed / λ_rest) - 1
+- Compute radial velocity v = z × c (where c = 299792 km/s)
+- Loop through multiple stars, plot spectra (red dashed for receding, blue solid for approaching)
+- Display stars moving away from Earth
 
-## 🛠 Features
-- **Automated Peak Detection:** Locates the minimum intensity point in the spectrum flux.
-- **Batch Processing:** Iterates through `starData.mat` to analyze 7 different stars in one execution.
-- **Dynamic Visualization:** - **Blue Solid Lines:** Approaching stars ($\lambda_{obs} < \lambda_{rest}$).
-  - **Red Dashed Lines:** Receding stars ($\lambda_{obs} > \lambda_{rest}$).
+.🧮 Physics Logic & CalculationsTo calculate the motion, the script executes the following algorithm:Identify the $H\alpha$ line: Locate the minimum intensity point (absorption dip).Calculate Redshift ($z$): $$z = \frac{\lambda_{observed}}{\lambda_{rest}} - 1$$(where $\lambda_{rest} = 656.28$ nm)Compute Radial Velocity ($v$):$$v = z \times c$$(where $c = 299,792$ km/s)
 
+## Files Included
+- `stellar_motion_analysis.m` → Main script with calculations and plots
+- `starData.mat` → Data file (load starData; contains lambda, spectra, starnames)
+- `README.md` → This file
 
+## How to Run
+1. Open MATLAB
+2. Set the current folder to this repository
+3. Run the script: `stellar_motion_analysis`
 
-## 📁 Repository Structure
-| File | Description |
-| :--- | :--- |
-| `stellar_motion_analysis.m` | Core MATLAB algorithm and visualization engine. |
-| `starData.mat` | Source dataset containing `lambda`, `spectra`, and `starnames`. |
-| `plots/` | Directory containing exported high-res PNGs of results. |
-| `.gitignore` | Excludes MATLAB environment junk (`.asv`, `.mat` temp files). |
+## Example Plots
 
-## 📊 Sample Output: HD94028
-- **Rest Wavelength:** 656.28 nm
-- **Observed Wavelength:** ~656.46 nm
-- **Calculated Velocity:** **+82 km/s** (Receding)
+![Single Star Spectrum](plots/single_star_HD94028_spectrum.png)
+*HD94028 ka spectrum with marked Hα line (~ +82 km/s redshift)*
 
----
+![All Stars Spectra](plots/all_stars_spectra.png)
+*Sab stars ke overlaid spectra (red dashed = receding, blue thick = approaching)*
 
-## 🔧 Installation & Deployment
-1. **Clone the Repo:** `git clone https://github.com/yourusername/stellar-motion.git`
-2. **Launch MATLAB:** Navigate to the project directory.
-3. **Execute:** Type `stellar_motion_analysis` in the Command Window.
+## Example Output
+- For HD94028: Radial velocity ≈ **+82 km/s** (positive = receding/redshift)
+- Plots show spectra with marked Hα dip and legend for all stars
+
+Data Source: MATLAB Onramp course (Stellar Motion project section)
+
+Created by Shubham | Uttar Pradesh, India | January 2026
+ readme file is this 
