@@ -2,7 +2,7 @@
 
 This project analyzes the **radial velocity** of stars using Doppler shift (redshift/blueshift) from their spectra. It focuses on the Hydrogen-alpha (Hα) absorption line at rest wavelength 656.28 nm to determine how fast stars are moving toward or away from Earth.
 
-## Project Overview
+## 🚀Project Overview
 - Plot the spectrum of individual stars (e.g., HD94028)
 - Find the observed wavelength of the Hα line (minimum intensity point)
 - Calculate redshift z = (λ_observed / λ_rest) - 1
@@ -16,10 +16,12 @@ To calculate the motion, the script executes the following algorithm:
 2. Calculate Redshift ($z$): $$z = \frac{\lambda_{observed}}{\lambda_{rest}} - 1$$(where $\lambda_{rest} = 656.28$ nm)
 3. Compute Radial Velocity ($v$):$$v = z \times c$$(where $c = 299,792$ km/s)
 
-## Files Included
+## 🛠 Files Included
 - `stellar_motion_analysis.m` → Main script with calculations and plots
 - `starData.mat` → Data file (load starData; contains lambda, spectra, starnames)
 - `README.md` → This file
+# 📁 Repository Structure
+FileDescriptionstellar_motion_analysis.mMain script with Doppler calculations and graphics engine.starData.matDataset containing lambda, spectra, and starnames.plots/Directory for exported PNG visualizations.README.mdProject documentation and technical specs.
 
 ## How to Run
 1. Open MATLAB
