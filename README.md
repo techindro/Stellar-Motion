@@ -22,11 +22,13 @@ To calculate the motion, the script executes the following algorithm:
 - `README.md` → This file
 - 
 ## 📁 Repository Structure
-File,Description
-stellar_motion_analysis.m,Main script with Doppler calculations and graphics engine.
-starData.mat,"Dataset containing lambda, spectra, and starnames."
-plots/,Directory for exported PNG visualizations.
-README.md,Project documentation and technical specs.
+
+| File / Directory | Description |
+| :--- | :--- |
+| **`stellar_motion_analysis.m`** | Main script containing Doppler shift algorithms and the graphics rendering engine. |
+| **`starData.mat`** | Core dataset containing `lambda` (wavelength), `spectra` (flux data), and `starnames`. |
+| **`plots/`** | Repository for all exported PNG visualizations and high-res spectrum graphs. |
+| **`README.md`** | Project documentation, physics logic, and technical specifications. |
 
 ## How to Run
 1. Open MATLAB
