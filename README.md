@@ -11,9 +11,10 @@ This project analyzes the **radial velocity** of stars using Doppler shift (reds
 - Display stars moving away from Earth
 
 # 🧮 Physics Logic & Calculations
-To calculate the motion, the script executes the following algorithm:Identify the $H\alpha$ line: Locate the minimum intensity point (absorption dip).
-Calculate Redshift ($z$): $$z = \frac{\lambda_{observed}}{\lambda_{rest}} - 1$$(where $\lambda_{rest} = 656.28$ nm)
-Compute Radial Velocity ($v$):$$v = z \times c$$(where $c = 299,792$ km/s)
+To calculate the motion, the script executes the following algorithm:
+1. # Identify the $H\alpha$ line: Locate the minimum intensity point (absorption dip).
+2. # Calculate Redshift ($z$): $$z = \frac{\lambda_{observed}}{\lambda_{rest}} - 1$$(where $\lambda_{rest} = 656.28$ nm)
+3. # Compute Radial Velocity ($v$):$$v = z \times c$$(where $c = 299,792$ km/s)
 
 ## Files Included
 - `stellar_motion_analysis.m` → Main script with calculations and plots
