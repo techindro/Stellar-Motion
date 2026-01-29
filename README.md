@@ -22,10 +22,10 @@ This project analyzes the **radial velocity** of stars using Doppler shift (reds
 
 ## Example Plots
 
-![Single Star Spectrum](single_star_HD94028_spectrum.png)
+![Single Star Spectrum](plots/single_star_HD94028_spectrum.png)
 *HD94028 ka spectrum with marked Hα line (~ +82 km/s redshift)*
 
-![All Stars Spectra](all_stars_spectra.png)
+![All Stars Spectra](plots/all_stars_spectra.png)
 *Sab stars ke overlaid spectra (red dashed = receding, blue thick = approaching)*
 
 ## Example Output
