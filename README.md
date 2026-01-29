@@ -10,7 +10,7 @@ This project analyzes the **radial velocity** of stars using Doppler shift (reds
 - Loop through multiple stars, plot spectra (red dashed for receding, blue solid for approaching)
 - Display stars moving away from Earth
 
-# 🧮 Physics Logic & Calculations
+## 🧮 Physics Logic & Calculations
 To calculate the motion, the script executes the following algorithm:
 1. Identify the $H\alpha$ line: Locate the minimum intensity point (absorption dip).
 2. Calculate Redshift ($z$): $$z = \frac{\lambda_{observed}}{\lambda_{rest}} - 1$$(where $\lambda_{rest} = 656.28$ nm)
@@ -20,8 +20,13 @@ To calculate the motion, the script executes the following algorithm:
 - `stellar_motion_analysis.m` → Main script with calculations and plots
 - `starData.mat` → Data file (load starData; contains lambda, spectra, starnames)
 - `README.md` → This file
-# 📁 Repository Structure
-FileDescriptionstellar_motion_analysis.mMain script with Doppler calculations and graphics engine.starData.matDataset containing lambda, spectra, and starnames.plots/Directory for exported PNG visualizations.README.mdProject documentation and technical specs.
+- 
+## 📁 Repository Structure
+File,Description
+stellar_motion_analysis.m,Main script with Doppler calculations and graphics engine.
+starData.mat,"Dataset containing lambda, spectra, and starnames."
+plots/,Directory for exported PNG visualizations.
+README.md,Project documentation and technical specs.
 
 ## How to Run
 1. Open MATLAB
