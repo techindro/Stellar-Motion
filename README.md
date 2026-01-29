@@ -14,7 +14,7 @@ This project analyzes the **radial velocity** of stars using Doppler shift (reds
 To calculate the motion, the script executes the following algorithm:
 1. Identify the $H\alpha$ line: Locate the minimum intensity point (absorption dip).
 2. Calculate Redshift ($z$): $$z = \frac{\lambda_{observed}}{\lambda_{rest}} - 1$$(where $\lambda_{rest} = 656.28$ nm)
-3. Compute Radial Velocity ($v$):$$v = z \times c$$(where $c = 299,792$ km/s)
+3.Compute Radial Velocity ($v$): $$v = z \times c$$(where $c = 299,792$ km/s)
 
 ## 🛠 Files Included
 - `stellar_motion_analysis.m` → Main script with calculations and plots
@@ -25,7 +25,7 @@ To calculate the motion, the script executes the following algorithm:
 
 | File / Directory | Description |
 | :--- | :--- |
-| *`stellar_motion_analysis.m`| Main script containing Doppler shift algorithms and the graphics rendering engine. |
+| *`stellar_motion_analysis.m*`| Main script containing Doppler shift algorithms and the graphics rendering engine. |
 | *`starData.mat`* | Core dataset containing `lambda` (wavelength), `spectra` (flux data), and `starnames`. |
 | *`plots/`* | Repository for all exported PNG visualizations and high-res spectrum graphs. |
 | *`README.md`* | Project documentation, physics logic, and technical specifications. |
