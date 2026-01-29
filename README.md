@@ -12,8 +12,8 @@ This project analyzes the **radial velocity** of stars using Doppler shift (reds
 
 ## Files Included
 - `stellar_motion_analysis.m` → Main script with calculations and plots
-- `starData.mat`           → Data file (load starData; contains lambda, spectra, starnames)
-- `README.md`              → This file
+- `starData.mat` → Data file (load starData; contains lambda, spectra, starnames)
+- `README.md` → This file
 
 ## How to Run
 1. Open MATLAB
@@ -21,7 +21,7 @@ This project analyzes the **radial velocity** of stars using Doppler shift (reds
 3. Run the script: `stellar_motion_analysis`
 
 ## Example Output
-- For HD94028: Radial velocity ≈ +XXX km/s (positive = receding/redshift)
+- For HD94028: Radial velocity ≈ **+82 km/s** (positive = receding/redshift)
 - Plots show spectra with marked Hα dip and legend for all stars
 
 Data Source: MATLAB Onramp course (Stellar Motion project section)
